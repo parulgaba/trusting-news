@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "React template.",
   "main": "index.js",
+  "homepage": "http://parulgaba.github.io/trusting-news",
   "scripts": {
     "start": "webpack-dev-server --progress --colors --mode development",
     "dev": "webpack -p --progress --colors --mode development",
@@ -10,7 +11,9 @@
     "test": "jest",
     "lint": "eslint app/** __tests__/**",
     "fix": "eslint app/** __tests__/** --fix",
-    "bundle-analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer ./stats.json"
+    "bundle-analyze": "webpack --profile --json > stats.json && webpack-bundle-analyzer ./stats.json",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": {
     "keywords": [
@@ -70,6 +73,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
+    "gh-pages": "^2.0.1",
     "jest-cli": "^23.6.0",
     "prettier": "^1.14.3",
     "regenerator-runtime": "^0.12.1",
